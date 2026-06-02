@@ -16,12 +16,13 @@ import joblib
 # (프로그램 시작 속도를 빠르게 유지하기 위해)
 
 # ── 경로 ──────────────────────────────────────────────────────────────
-MODEL_PATH     = r"D:\python_projects\posture\pose_landmarker.task"
-CONFIG_PATH    = r"D:\python_projects\posture\offsets.json"
-IMAGE_PATH     = r"D:\python_projects\posture\bunny-rabbit.gif"
-CSV_PATH       = r"D:\python_projects\posture\posture_log.csv"
-DATASET_PATH   = r"D:\python_projects\posture\posture_dataset.csv"
-MODEL_PKL_PATH = r"D:\python_projects\posture\posture_model.pkl"
+_BASE = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH     = os.path.join(_BASE, "pose_landmarker.task")
+CONFIG_PATH    = os.path.join(_BASE, "offsets.json")
+IMAGE_PATH     = os.path.join(_BASE, "bunny-rabbit.gif")
+CSV_PATH       = os.path.join(_BASE, "posture_log.csv")
+DATASET_PATH   = os.path.join(_BASE, "posture_dataset.csv")
+MODEL_PKL_PATH = os.path.join(_BASE, "posture_model.pkl")
 
 # ── 거북목 판별 기본 설정 ──────────────────────────────────────────────
 TURTLE_THRESHOLD   = 0.55   # 모델 없을 때 사용하는 고정 임계값

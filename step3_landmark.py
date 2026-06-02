@@ -7,8 +7,9 @@ import json
 import os
 
 # 경로
-MODEL_PATH = r"D:\python_projects\posture\pose_landmarker.task"
-CONFIG_PATH = r"D:\python_projects\posture\offsets.json"
+_BASE = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(_BASE, "pose_landmarker.task")
+CONFIG_PATH = os.path.join(_BASE, "offsets.json")
 
 # PoseLandmarker 초기화
 base_options = mp_python.BaseOptions(model_asset_path=MODEL_PATH)
